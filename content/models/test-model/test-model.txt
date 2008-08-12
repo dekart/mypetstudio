@@ -1,0 +1,3 @@
+Hi, I'm a new page!
+<a href="#" onclick="shopping_cart.addItem({name: 'Мега модель', quantity: 1, price: 10}); return false;">Добавить</a>
+<a href="#" onclick="shopping_cart.removeAt(1); return false;">Убрать</a>

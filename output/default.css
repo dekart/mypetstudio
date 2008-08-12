@@ -1,0 +1,200 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	background: #FFFFFF;
+	font: normal small "Comic Sans MS", Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+}
+
+h4, h5, h6 {
+}
+
+p, ul, ol, blockquote {
+	margin-top: 0;
+}
+
+a {
+	color: #344E44;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+/* Header */
+
+#header {
+	width: 700px;
+	height: 150px;
+	margin: 0 auto 20px auto;
+	background: #344E44 url(images/img1.gif);
+}
+
+#header h1 {
+	float: left;
+	padding: 20px;
+	font-size: 3em;
+}
+
+#header h2 {
+	float: left;
+	padding: 40px 0 0 0;
+}
+
+#header a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/* Pages */
+
+#pages {
+	float: right;
+	clear: both;
+}
+
+#pages h2 {
+	display: none;
+}
+
+#pages ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.4em;
+}
+
+#pages li {
+	display: inline;
+	padding-right: 20px;
+}
+
+#pages a:hover {
+	text-decoration: underline;
+}
+
+/* Content */
+
+#content {
+	width: 700px;
+	margin: 0 auto;
+}
+
+/* Column One */
+
+#colOne {
+	float: left;
+	width: 480px;
+}
+
+#colOne .title {
+	font-size: 2em;
+}
+
+#colOne .posted {
+	margin-bottom: 1em;
+}
+
+#colOne .meta {
+	background: url(images/img3.gif) repeat-x left bottom;
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+	text-align: right;
+	font-style: italic;
+	font-size: .8em;
+}
+
+/* Column Two */
+
+#colTwo {
+	float: right;
+	width: 200px;
+}
+
+#colTwo form {
+	margin: 0;
+	padding: 0;
+}
+
+#colTwo #textfield1 {
+	width: 10em;
+	padding: .25em;
+	background: #344E44 url(images/img1.gif) no-repeat center center;
+	border: none;
+	font: bold small "Comic Sans MS", Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+
+#colTwo #submit1 {
+	width: 3em;
+	background: #344E44 url(images/img1.gif) no-repeat center center;
+	border: none;
+	font: bold small "Comic Sans MS", Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+
+#colTwo ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#colTwo li {
+	margin-bottom: 1em;
+}
+
+#colTwo li ul {
+}
+
+#colTwo li li {
+	margin: 0;
+	padding-left: 2em;
+}
+
+#colTwo li h2 {
+	width: 200px;
+	height: 30px;
+	margin-bottom: 1em;
+	background: #344E44 url(images/img2.gif);
+	text-align: center;
+	font-size: 1.4em;
+	color: #FFFFFF;
+}
+
+/* Footer */
+
+#footer {
+	width: 700px;
+	height: 40px;
+	margin: 0 auto;
+	padding-top: 20px;
+	background: url(images/img4.gif);
+}
+
+#footer p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#footer a {
+	color: #FFFFFF;
+}
