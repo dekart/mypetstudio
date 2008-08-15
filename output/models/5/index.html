@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Модель 5</title>
+<title>Комбинезон</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="/default.css" rel="stylesheet" type="text/css" />
@@ -30,19 +30,23 @@
 		
 		document.observe("dom:loaded", function(){
 			shopping_cart = new ShoppingCart("cart");
-			shopping_cart.show();
-    });
-    
-    window.onload = function(){
-      var order_frame = document.getElementById('order_frame');
       
-      if(order_frame){
-        var doc = order_frame.contentWindow ? order_frame.contentWindow.document : order_frame.contentDocument; 
+      shopping_cart.observe("items:change", function(e){
         
-        doc.getElementById('entry_7').value="anything"; 
-      }
+        if(shopping_cart.getItems().length > 0){
+          shopping_cart.element.show();
+        } else {
+          shopping_cart.element.hide();
+        }
+          
+      });
       
-    }
+			if(shopping_cart.getItems().length > 0) shopping_cart.show();
+      
+      if($('entry_7')){
+        $('entry_7').value = shopping_cart.toEmail();
+      }
+    });
   </script>
 </head>
 <body>
@@ -64,25 +68,25 @@
 <div id="content">
 	<div id="colOne">
 		<div class="post">
-			<h2 class="title">Модель 5</h2>
+			<h1 class="title">Комбинезон</h1>
 			<div class="story">
             <table align="right">
       <tr><td><h3>Заказ</h3></td></tr>
       <tr>
         <td>    <div class="cart_badge">
-      <div class="price">Стоимость: 100 р.</div>
-      <a href="#" onclick="shopping_cart.addItem({name: 'Модель 5', quantity: 1, price: 100}); return false;" class="add">Добавить в корзину</a>
+      <div class="price">Стоимость: 1700 р.</div>
+      <a href="#" onclick="shopping_cart.addItem({name: 'Комбинезон', quantity: 1, price: 1700}); return false;" class="add">Добавить в корзину</a>
     </div>
 </td>
       </tr>
       <tr><td><h3>Фотогалерея</h3></td></tr>
       <tr>
-        <td><div class='pictures'><a href='/photos/5/12.jpg' rel='lightbox[roadtrip]'><img src='/photos/5.jpg' alt='Фотографии Модель 5' class='cover' /></a><a href='/photos/5/13.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/16.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/20.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/22.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/24.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/25.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/26.jpg' rel='lightbox[roadtrip]'></a></div></td>
+        <td><div class='pictures'><a href='/photos/5/12.jpg' rel='lightbox[roadtrip]'><img src='/photos/5.jpg' alt='Фотографии Комбинезон' class='cover' /></a><a href='/photos/5/13.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/16.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/20.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/22.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/24.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/25.jpg' rel='lightbox[roadtrip]'></a><a href='/photos/5/26.jpg' rel='lightbox[roadtrip]'></a></div></td>
       </tr>
     </table>
 
 
-        <p>Описание модели 1</p>
+        <p>Комбинезон на застежке&#45;липучке, выполненный из плащевой такни, с 2 парами рукавов, заканчивающимися манжетами&#45;резинками, верх состоит из 2-х частей, верхняя по линии плеча декорирована клепками и 4 застройками по линии горловины, нижняя находится между передними и задними конечностями и декорирована карманов в рамку, воротник-стойка.</p>
 			</div>
 		</div>
 	</div>

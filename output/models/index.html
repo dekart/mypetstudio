@@ -30,14 +30,17 @@
 		
 		document.observe("dom:loaded", function(){
 			shopping_cart = new ShoppingCart("cart");
-      shopping_cart.observe("cart:items:change", function(e){
-        if(e.cart.getItems().length > 0){
-          e.cart.element.show();
+      
+      shopping_cart.observe("items:change", function(e){
+        
+        if(shopping_cart.getItems().length > 0){
+          shopping_cart.element.show();
         } else {
-          e.cart.hide();
+          shopping_cart.element.hide();
         }
           
       });
+      
 			if(shopping_cart.getItems().length > 0) shopping_cart.show();
       
       if($('entry_7')){
@@ -65,7 +68,7 @@
 <div id="content">
 	<div id="colOne">
 		<div class="post">
-			<h2 class="title">Модели</h2>
+			<h1 class="title">Модели</h1>
 			<div class="story">
         
 
@@ -73,29 +76,29 @@
   <tr>
 
       <td style="text-align: center;">
-        <a href="/models/1/"><img src='/photos/1.jpg' alt='Фотографии Модель 1' class='cover' /></a><br />
-        <a href="/models/1/">Модель 1</a>
+        <a href="/models/1/"><img src='/photos/1.jpg' alt='Фотографии Дождевик' class='cover' /></a><br />
+        <a href="/models/1/">Дождевик</a>
       </td>
 
       <td style="text-align: center;">
-        <a href="/models/2/"><img src='/photos/2.jpg' alt='Фотографии Модель 2' class='cover' /></a><br />
-        <a href="/models/2/">Модель 2</a>
+        <a href="/models/2/"><img src='/photos/2.jpg' alt='Фотографии Толстовка' class='cover' /></a><br />
+        <a href="/models/2/">Толстовка</a>
       </td>
 
       <td style="text-align: center;">
-        <a href="/models/3/"><img src='/photos/3.jpg' alt='Фотографии Модель 3' class='cover' /></a><br />
-        <a href="/models/3/">Модель 3</a>
+        <a href="/models/3/"><img src='/photos/3.jpg' alt='Фотографии Платье' class='cover' /></a><br />
+        <a href="/models/3/">Платье</a>
       </td>
       </tr><tr><td>&nbsp;</td></tr><tr>
 
       <td style="text-align: center;">
-        <a href="/models/4/"><img src='/photos/4.jpg' alt='Фотографии Модель 4' class='cover' /></a><br />
-        <a href="/models/4/">Модель 4</a>
+        <a href="/models/4/"><img src='/photos/4.jpg' alt='Фотографии Джемпер' class='cover' /></a><br />
+        <a href="/models/4/">Джемпер</a>
       </td>
 
       <td style="text-align: center;">
-        <a href="/models/5/"><img src='/photos/5.jpg' alt='Фотографии Модель 5' class='cover' /></a><br />
-        <a href="/models/5/">Модель 5</a>
+        <a href="/models/5/"><img src='/photos/5.jpg' alt='Фотографии Комбинезон' class='cover' /></a><br />
+        <a href="/models/5/">Комбинезон</a>
       </td>
 
   <tr>
