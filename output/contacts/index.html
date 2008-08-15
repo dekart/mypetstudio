@@ -30,8 +30,23 @@
 		
 		document.observe("dom:loaded", function(){
 			shopping_cart = new ShoppingCart("cart");
-			shopping_cart.show();
-    })
+      
+      shopping_cart.observe("items:change", function(e){
+        
+        if(shopping_cart.getItems().length > 0){
+          shopping_cart.element.show();
+        } else {
+          shopping_cart.element.hide();
+        }
+          
+      });
+      
+			if(shopping_cart.getItems().length > 0) shopping_cart.show();
+      
+      if($('entry_7')){
+        $('entry_7').value = shopping_cart.toEmail();
+      }
+    });
   </script>
 </head>
 <body>
@@ -53,7 +68,7 @@
 <div id="content">
 	<div id="colOne">
 		<div class="post">
-			<h2 class="title">Контакты</h2>
+			<h1 class="title">Контакты</h1>
 			<div class="story">
         
 
