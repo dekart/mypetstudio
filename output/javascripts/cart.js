@@ -1,11 +1,16 @@
 ShoppingCart = Class.create({
   options: {
-    cartTemplate : new Template("<h2>#{cartHeader}</h2><table>#{items}</table><b>#{totalPrice}: #{total} #{currency}</b>"),
-    itemTemplate : new Template("<tr><td>#{name}</td><td>#{quantity}</td><td>x</td><td>#{price} #{currency}</td><td><a href='#' onclick=\"$('#{element_id}').cart.removeAt(#{position})\">-</a></td></tr>"),
+    cartTemplate : new Template("<h2>#{cartHeader}</h2><table>#{items}</table><br /><p><b>#{totalPrice}: #{total} #{currency}</b> <a href='#{order_url}'>#{order}</a></p>"),
+    itemTemplate : new Template("<tr><td>#{name}:</td><td>#{quantity}</td><td>x</td><td>#{price} #{currency}</td><td><a href='#' onclick=\"$('#{element_id}').cart.removeAt(#{position})\">#{remove}</a></td></tr>"),
+    urls : {
+      order_url: "/order/"
+    },
     labels : {
       currency    : "р.",
       cartHeader  : "Корзина заказов",
-      totalPrice  : "Итого"
+      totalPrice  : "Итого",
+      remove      : "Убрать",
+      order       : "Оформить &raquo;"
     }
   },
   
@@ -35,7 +40,7 @@ ShoppingCart = Class.create({
     var cart_html = this.options.cartTemplate.evaluate($H({
       items: items_html,
       total: this.totalPrice()
-    }).merge(options.labels));
+    }).merge(options.labels).merge(options.urls));
     
     this.element.innerHTML = cart_html;
   },
@@ -144,6 +149,16 @@ ShoppingCart = Class.create({
   observe: function(eventName, handler) {
     this.element.observe('cart:' + eventName, handler.bind(this));
     return this;
+  },
+  
+  toEmail: function(){
+    var result = "";
+    
+    this.getItems().each(function(item){
+      result = result + item.name  + ": " + item.quantity + "\n";
+    });
+    
+    return result;
   }
   
 });

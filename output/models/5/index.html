@@ -31,7 +31,18 @@
 		document.observe("dom:loaded", function(){
 			shopping_cart = new ShoppingCart("cart");
 			shopping_cart.show();
-    })
+    });
+    
+    window.onload = function(){
+      var order_frame = document.getElementById('order_frame');
+      
+      if(order_frame){
+        var doc = order_frame.contentWindow ? order_frame.contentWindow.document : order_frame.contentDocument; 
+        
+        doc.getElementById('entry_7').value="anything"; 
+      }
+      
+    }
   </script>
 </head>
 <body>
@@ -89,6 +100,8 @@
             <li><a href="/information/measurement/">Как снять мерки</a></li>
           
             <li><a href="/information/order/">Как заказать</a></li>
+          
+            <li><a href="/information/payment/">Оплата</a></li>
           
             <li><a href="/information/faq/">Часто задаваемые вопросы</a></li>
           

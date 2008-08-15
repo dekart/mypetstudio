@@ -30,8 +30,20 @@
 		
 		document.observe("dom:loaded", function(){
 			shopping_cart = new ShoppingCart("cart");
-			shopping_cart.show();
-    })
+      shopping_cart.observe("cart:items:change", function(e){
+        if(e.cart.getItems().length > 0){
+          e.cart.element.show();
+        } else {
+          e.cart.hide();
+        }
+          
+      });
+			if(shopping_cart.getItems().length > 0) shopping_cart.show();
+      
+      if($('entry_7')){
+        $('entry_7').value = shopping_cart.toEmail();
+      }
+    });
   </script>
 </head>
 <body>

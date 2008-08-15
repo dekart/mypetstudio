@@ -1,1 +1,53 @@
 Оформление заказа
+
+<link type="text/css" rel="stylesheet" href="/form.css">
+
+<div class="ss-base-body">
+  <p class="ss-required-asterisk">Все поля обязательны для заполнения</p>
+  <form id="order_form" action="http://spreadsheets.google.com/formResponse?key=pyJpYhjms-Enin7DOeEzHTw&amp;embedded=true" method="POST">
+
+    <div class="ss-form-entry">
+      <label for="entry_7" class="ss-q-title">Состав заказа</label>
+      <textarea name="entry.7.single" rows="8" cols="75" id="entry_7" class="ss-q-long"></textarea>
+    </div>
+
+    <div class="ss-form-entry">
+      <label for="entry_8" class="ss-q-title">Мерки</label>
+      <label for="entry_8" class="ss-q-help">Размеры собаки, используемые для пошива. <a href="/information/measurement/" target="_blank">Как снять мерки &raquo;</a></label>
+      <textarea name="entry.8.single" rows="8" cols="75" id="entry_8" class="ss-q-long"></textarea>
+    </div>
+
+    <div class="ss-form-entry">
+      <label for="entry_9" class="ss-q-title">Способ оплаты</label>
+      <select name="entry.9.single" id="entry_9">
+        <option value="&#1053;&#1072;&#1083;&#1080;&#1095;&#1085;&#1099;&#1077; &#1082;&#1091;&#1088;&#1100;&#1077;&#1088;&#1091;">&#1053;&#1072;&#1083;&#1080;&#1095;&#1085;&#1099;&#1077; &#1082;&#1091;&#1088;&#1100;&#1077;&#1088;&#1091;</option> 
+        <option value="&#1053;&#1072;&#1083;&#1086;&#1078;&#1077;&#1085;&#1085;&#1099;&#1081; &#1087;&#1083;&#1072;&#1090;&#1077;&#1078;">&#1053;&#1072;&#1083;&#1086;&#1078;&#1077;&#1085;&#1085;&#1099;&#1081; &#1087;&#1083;&#1072;&#1090;&#1077;&#1078;</option> 
+        <option value="Webmoney, &#1071;&#1085;&#1076;&#1077;&#1082;&#1089;.&#1044;&#1077;&#1085;&#1100;&#1075;&#1080;">Webmoney, &#1071;&#1085;&#1076;&#1077;&#1082;&#1089;.&#1044;&#1077;&#1085;&#1100;&#1075;&#1080;</option>
+      </select>
+    </div>
+
+    <div class="ss-form-entry">
+      <label for="entry_10" class="ss-q-title">Ф.И.О.</label>
+      <input type="text" name="entry.10.single" value="" id="entry_10" class="ss-q-short">
+    </div>
+
+    <div class="ss-form-entry">
+      <label for="entry_11" class="ss-q-title">Адрес доставки</label>
+      <label for="entry_11" class="ss-q-help">Полный почтовый адрес, включая почтовый индекс, название страны и города</label>
+      <textarea name="entry.11.single" rows="8" cols="75" id="entry_11" class="ss-q-long"></textarea>
+    </div>
+
+    <div class="ss-form-entry">
+      <label for="entry_12" class="ss-q-title">Контактный телефон</label>
+      <label for="entry_12" class="ss-q-help">Обязательно указывайте код города</label>
+      <input type="text" name="entry.12.single" value="" id="entry_12" class="ss-q-short">
+    </div>
+
+    <div class="ss-form-entry">
+      <label for="entry_13" class="ss-q-title">E-Mail</label>
+      <input type="text" name="entry.13.single" value="" id="entry_13" class="ss-q-short">
+    </div>
+
+    <input type="submit" value="Отправить">
+  </form>
+</div>
