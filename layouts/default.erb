@@ -6,15 +6,28 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="/default.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/lightbox.css" type="text/css" media="screen" />
+
 
 	<script src="/javascripts/protoculous-packer.js"></script>
 	<script src="/javascripts/cookiejar.js"></script>
 	<script src="/javascripts/cart.js"></script>
+  
+  <script type="text/javascript">
+    window.LightboxOptions = {
+      fileLoadingImage:        '/images/lightbox/loading.gif',     
+      fileBottomNavCloseImage: '/images/lightbox/closelabel.gif',
+      labelImage: "Фото",
+      labelOf: "из",
+      resizeSpeed: 9,
+      borderSize: 5
+    }
+</script>
+  <script type="text/javascript" src="/javascripts/lightbox.js"></script>
 	
 	<script type="text/javascript">
 		var shopping_cart = null;
 		
-		//sc.addItem({name: "Mega item", quantity: 1, price: 10});
 		document.observe("dom:loaded", function(){
 			shopping_cart = new ShoppingCart("cart");
 			shopping_cart.show();
@@ -27,13 +40,13 @@
 		<h1><a href="/"><%= @config[:site_name] %></a></h1>
 	</div>
 	<div id="pages">
-		<h2>Pages</h2>
+		<h2>Страницы</h2>
 		<ul>
 			<li><a href="/">Главная</a></li>
-			<li><a href="/models">Модели</a></li>
-			<li><a href="/order">Заказ</a></li>
-			<li><a href="#">About Me</a></li>
-			<li><a href="#">Contact Me</a></li>
+			<li><a href="/models/">Модели</a></li>
+			<li><a href="/order/">Заказ</a></li>
+			<li><a href="/about/">О Студии</a></li>
+			<li><a href="/contacts/">Контакты</a></li>
 		</ul>
 	</div>
 </div>
@@ -42,7 +55,9 @@
 		<div class="post">
 			<h2 class="title"><%= @page.title %></h2>
 			<div class="story">
-				<%= @page.content %>
+        <%= model_info(@page) if @page[:model] %>
+
+        <%= @page.content %>
 			</div>
 		</div>
 	</div>
@@ -50,21 +65,11 @@
 		<ul>
 			<li id="cart"></li>
 			<li>
-				<h2>Меню</h2>
+				<h2>Информация</h2>
 				<ul>
-					<li><a href="#">January 2007</a></li>
-					<li><a href="#">December 2006</a></li>
-					<li><a href="#">November 2006</a></li>
-					<li><a href="#">October 2006</a></li>
-					<li><a href="#">September 2006</a></li>
-					<li><a href="#">August 2006</a></li>
-					<li><a href="#">July 2006</a></li>
-					<li><a href="#">June 2006</a></li>
-					<li><a href="#">May 2006</a></li>
-					<li><a href="#">April 2006</a></li>
-					<li><a href="#">March 2006</a></li>
-					<li><a href="#">February 2006</a></li>
-					<li><a href="#">January 2006</a></li>
+          <% @pages.select{|p| p[:path] =~ /\/information\/.+/i}.each do |page| %>
+            <li><a href="<%= page[:path]%>"><%= page[:title]%></a></li>
+          <% end %>
 				</ul>
 			</li>
 		</ul>
@@ -72,7 +77,7 @@
 	<div style="clear: both;">&nbsp;</div>
 </div>
 <div id="footer">
-	<p>Copyright &copy; 2008 My Pet Studio. Designed by <a href="http://www.freecsstemplates.org/"><strong>Free CSS Templates</strong></a></p>
+	<p>Copyright &copy; 2008 My Pet Studio</p>
 </div>
 </body>
 </html>

@@ -1,1 +1,11 @@
-Hi, I'm a new page!
+<table align="center">
+  <tr>
+    <% @pages.select{|p| p[:path] =~ /\/models\/.+/}.sort{|a,b| a[:path] <=> b[:path]}.each_with_index do |model, index| %>
+      <td style="text-align: center;">
+        <a href="<%= model[:path] %>"><%= model_cover(model) %></a><br />
+        <a href="<%= model[:path] %>"><%= model[:title] %></a>
+      </td>
+      <% if index % 3 == 2 %></tr><tr><td>&nbsp;</td></tr><tr><% end %>
+    <% end %>
+  <tr>
+</table>

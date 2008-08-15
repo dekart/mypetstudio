@@ -6,15 +6,28 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="/default.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/lightbox.css" type="text/css" media="screen" />
+
 
 	<script src="/javascripts/protoculous-packer.js"></script>
 	<script src="/javascripts/cookiejar.js"></script>
 	<script src="/javascripts/cart.js"></script>
+  
+  <script type="text/javascript">
+    window.LightboxOptions = {
+      fileLoadingImage:        '/images/lightbox/loading.gif',     
+      fileBottomNavCloseImage: '/images/lightbox/closelabel.gif',
+      labelImage: "Фото",
+      labelOf: "из",
+      resizeSpeed: 9,
+      borderSize: 5
+    }
+</script>
+  <script type="text/javascript" src="/javascripts/lightbox.js"></script>
 	
 	<script type="text/javascript">
 		var shopping_cart = null;
 		
-		//sc.addItem({name: "Mega item", quantity: 1, price: 10});
 		document.observe("dom:loaded", function(){
 			shopping_cart = new ShoppingCart("cart");
 			shopping_cart.show();
@@ -27,13 +40,13 @@
 		<h1><a href="/">My Pet Studio</a></h1>
 	</div>
 	<div id="pages">
-		<h2>Pages</h2>
+		<h2>Страницы</h2>
 		<ul>
 			<li><a href="/">Главная</a></li>
-			<li><a href="/models">Модели</a></li>
-			<li><a href="/order">Заказ</a></li>
-			<li><a href="#">About Me</a></li>
-			<li><a href="#">Contact Me</a></li>
+			<li><a href="/models/">Модели</a></li>
+			<li><a href="/order/">Заказ</a></li>
+			<li><a href="/about/">О Студии</a></li>
+			<li><a href="/contacts/">Контакты</a></li>
 		</ul>
 	</div>
 </div>
@@ -42,9 +55,21 @@
 		<div class="post">
 			<h2 class="title">Одежда для собак</h2>
 			<div class="story">
-				Добро пожаловать на сайт My Pet Studio!
+        
 
-Это главная страница сайта.
+        <p>Вы хотите, чтобы на Вашего питомца оглядывались на улице? Или планируете организовать домашнюю &#8220;тусовку&#8221; для своего питомца и его друзей и вам нужен экслюзивный наряд? Тогда вы пришли по нужному адресу!</p>
+
+
+	<p>My Pet Studio &#8211; это дизайн-студия экслюзивных моделей для всех пород собак. С искренней заботой и пониманием мы подойдем к каждому клиенту и его хозяину, создадим уникальный костюм на любой случай жизни.</p>
+
+
+	<p>В нашей студии представлены эксклюзивные универсальные модели для всех пород собак. Все, что от вас нужно &#8211; измерить вашего любимого пушистого питомца так, как показано здесь (ссылка), выслать нам замеры и получить теплую меховую шубку, летний сарафан или болоневый плащ, который будет защищать вашу собачку от холода и дождя.</p>
+
+
+	<p>ОБращаем Ваше внимание, что на сайте представлены типовые модели, которые являются примером того, что мы можем Вам предложить. Вы можете выбрать не только данную модель, которая будет сшита непосредственно на вашего питомца, но и заказать индивидуальную, объянив нашим дизайнерам вашу задумку.</p>
+
+
+	<p>Мы готовы отправить Вам созданную специально для Вашего питомца одежду любым удобным для Вас способом (ссылка). Доставка по Челябинску &#8211; бесплатная.</p>
 			</div>
 		</div>
 	</div>
@@ -52,21 +77,19 @@
 		<ul>
 			<li id="cart"></li>
 			<li>
-				<h2>Меню</h2>
+				<h2>Информация</h2>
 				<ul>
-					<li><a href="#">January 2007</a></li>
-					<li><a href="#">December 2006</a></li>
-					<li><a href="#">November 2006</a></li>
-					<li><a href="#">October 2006</a></li>
-					<li><a href="#">September 2006</a></li>
-					<li><a href="#">August 2006</a></li>
-					<li><a href="#">July 2006</a></li>
-					<li><a href="#">June 2006</a></li>
-					<li><a href="#">May 2006</a></li>
-					<li><a href="#">April 2006</a></li>
-					<li><a href="#">March 2006</a></li>
-					<li><a href="#">February 2006</a></li>
-					<li><a href="#">January 2006</a></li>
+          
+            <li><a href="/information/delivery/">Доставка</a></li>
+          
+            <li><a href="/information/guarantee/">Гарантии</a></li>
+          
+            <li><a href="/information/measurement/">Как снять мерки</a></li>
+          
+            <li><a href="/information/order/">Как заказать</a></li>
+          
+            <li><a href="/information/faq/">Часто задаваемые вопросы</a></li>
+          
 				</ul>
 			</li>
 		</ul>
@@ -74,7 +97,7 @@
 	<div style="clear: both;">&nbsp;</div>
 </div>
 <div id="footer">
-	<p>Copyright &copy; 2008 My Pet Studio. Designed by <a href="http://www.freecsstemplates.org/"><strong>Free CSS Templates</strong></a></p>
+	<p>Copyright &copy; 2008 My Pet Studio</p>
 </div>
 </body>
 </html>

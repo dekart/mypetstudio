@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Доставка</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/default.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/lightbox.css" type="text/css" media="screen" />
+
+
+	<script src="/javascripts/protoculous-packer.js"></script>
+	<script src="/javascripts/cookiejar.js"></script>
+	<script src="/javascripts/cart.js"></script>
+  
+  <script type="text/javascript">
+    window.LightboxOptions = {
+      fileLoadingImage:        '/images/lightbox/loading.gif',     
+      fileBottomNavCloseImage: '/images/lightbox/closelabel.gif',
+      labelImage: "Фото",
+      labelOf: "из",
+      resizeSpeed: 9,
+      borderSize: 5
+    }
+</script>
+  <script type="text/javascript" src="/javascripts/lightbox.js"></script>
+	
+	<script type="text/javascript">
+		var shopping_cart = null;
+		
+		document.observe("dom:loaded", function(){
+			shopping_cart = new ShoppingCart("cart");
+			shopping_cart.show();
+    })
+  </script>
+</head>
+<body>
+<div id="header">
+	<div id="logo">
+		<h1><a href="/">My Pet Studio</a></h1>
+	</div>
+	<div id="pages">
+		<h2>Страницы</h2>
+		<ul>
+			<li><a href="/">Главная</a></li>
+			<li><a href="/models/">Модели</a></li>
+			<li><a href="/order/">Заказ</a></li>
+			<li><a href="/about/">О Студии</a></li>
+			<li><a href="/contacts/">Контакты</a></li>
+		</ul>
+	</div>
+</div>
+<div id="content">
+	<div id="colOne">
+		<div class="post">
+			<h2 class="title">Доставка</h2>
+			<div class="story">
+        
+
+        <p>Условия доставки</p>
+			</div>
+		</div>
+	</div>
+	<div id="colTwo">
+		<ul>
+			<li id="cart"></li>
+			<li>
+				<h2>Информация</h2>
+				<ul>
+          
+            <li><a href="/information/delivery/">Доставка</a></li>
+          
+            <li><a href="/information/guarantee/">Гарантии</a></li>
+          
+            <li><a href="/information/measurement/">Как снять мерки</a></li>
+          
+            <li><a href="/information/order/">Как заказать</a></li>
+          
+            <li><a href="/information/faq/">Часто задаваемые вопросы</a></li>
+          
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<div id="footer">
+	<p>Copyright &copy; 2008 My Pet Studio</p>
+</div>
+</body>
+</html>

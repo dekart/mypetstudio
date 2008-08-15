@@ -6,7 +6,7 @@ custom_path:  none
 extension:    "html"
 filename:     "index"
 filters_post: []
-filters_pre:  []
+filters_pre:  ["erb", "textile"]
 is_draft:     false
 layout:       "default"
 skip_output:  false
