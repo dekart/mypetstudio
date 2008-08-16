@@ -46,9 +46,9 @@ img {
 	background: #344E44 url(images/img1.gif);
 }
 
-#header h1 {
+#header #logo img {
 	float: left;
-	padding: 20px;
+	padding: 20px 0px 0px 20px;
 	font-size: 3em;
 }
 

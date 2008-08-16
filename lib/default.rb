@@ -10,7 +10,7 @@ def cart_badge(page)
   <<-CODE
     <div class="cart_badge">
       <div class="price">Стоимость: #{page[:model][:price]} р.</div>
-      <a href="#" onclick="shopping_cart.addItem({name: '#{page[:title]}', quantity: 1, price: #{page[:model][:price]}}); return false;" class="add">Добавить в корзину</a>
+      <a href="#" onclick="shopping_cart.addItem({name: '#{page[:title]}', quantity: 1, price: #{page[:model][:price]}}); return false;" class="add">Добавить в корзину &raquo;</a>
     </div>
   CODE
 end
@@ -40,6 +40,7 @@ def model_info(model)
       <tr>
         <td>#{ cart_badge(model) }</td>
       </tr>
+      <tr><td>&nbsp;</td></tr>
       <tr><td><h3>Фотогалерея</h3></td></tr>
       <tr>
         <td>#{ model_pictures(model) }</td>
